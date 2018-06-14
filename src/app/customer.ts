@@ -7,6 +7,7 @@ export class Customer {
     name: Name;
     customerID: number;
     birthday: string;
+    photo:string;
     gender: string;
     lastContact: string;
     customerLifetimeValue: number;

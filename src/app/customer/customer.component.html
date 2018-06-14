@@ -1,4 +1,4 @@
-<div (click)="selectCustomer(customer)" [ngClass]="{selectedCustomer:customer.customerID === selectedCustomerID,deleted:isDeleted}" class="customer-card">
+<div (click)="selectCustomer()" [ngClass]="{selectedCustomer:customer.customerID === selectedCustomerID,deleted:isDeleted}" class="customer-card">
 
   <div class="customer-photos">
     <img src="../assets/photos/{{customer.photo}}" alt="">
