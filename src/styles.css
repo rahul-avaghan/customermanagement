@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html{
+    overflow: hidden;
+}
+body{
+    background-color: #fafafa;
+    font-family: Roboto, Arial, sans-serif;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+.flex-spacebetween{
+    justify-content: space-between;
+    
+}
+.flex-spacearound{
+    justify-content: space-around;
+}
+.flex-aligncenter{
+    align-items: center;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+
+.mat-radio-button {
+    margin-left: 0.2vw;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+    font-size: 1.1vw;
+}
+input.mat-input-element {
+    font-size: 0.9vw;
+}
+.mat-radio-label-content{
+    font-size: 0.9vw;
+}
+
+
+.customer-details-container {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    background: white;
+    background-color: white;
+    padding: 1vw;
+    transition: opacity 0.25s ease-in, transform 0.15s ease-in;
+}
+
+.mat-form-field {
+    margin-top: 2vw;
+}
+
+.customer-photo-details {
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+}
+
+.customer-photo-details:focus,
+.customer-photo-wrapper:focus {
+    opacity: 0.5;
+}
+
+.customer-photo-wrapper {
+    text-align: center;
+    cursor: pointer;
+}
+
+.showDetails {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.hideDetails {
+    opacity: 0;
+    transform: translateX(100%);
+}

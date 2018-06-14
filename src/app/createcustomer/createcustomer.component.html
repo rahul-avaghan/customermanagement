@@ -1,0 +1,35 @@
+<div [ngClass]="{hideDetails:!showDetails}" class="customer-details-container">
+  <div class="customer-photo-wrapper">
+    <img class="customer-photo-details" src="{{ '../assets/icons/profile.svg'}}">
+  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="customer.name.first" placeholder="Enter first name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="customer.name.last" placeholder="Enter last name">
+  </mat-form-field>
+
+  <mat-radio-group  [(ngModel)]="customer.gender">
+    <mat-radio-button  color="primary" value="m">Male</mat-radio-button>
+    <mat-radio-button  color="primary" value="w">Female</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="customer.birthday" placeholder="Birthday">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="customer.customerLifetimeValue" placeholder="Enter customer lifetime value">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  [(ngModel)]="customer.lastContact" [matDatepicker]="lastinteracteddate" placeholder="Last interacted date">
+    <mat-datepicker-toggle matSuffix [for]="lastinteracteddate"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #lastinteracteddate></mat-datepicker>
+  </mat-form-field>
+  
+  <div class="flex-row flex-spacearound">
+    <button (click)="onSaveCustomerDetails(customer)" color="primary" mat-raised-button>Save</button>
+    <button  (click)="onCancel()" mat-raised-button>Cancel</button>
+  </div>
+</div>

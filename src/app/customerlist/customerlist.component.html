@@ -1,0 +1,7 @@
+<div class="customer-list" >
+  <app-customer *ngFor="let customer of customerList"  [customer]="customer" routerLink="{{ 'customer' + '/' + customer.customerID}}">
+  </app-customer>
+  <div *ngIf="customerList.length===0">
+    <h2> No customer information available.</h2>
+  </div>
+</div>

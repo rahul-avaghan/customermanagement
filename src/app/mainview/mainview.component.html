@@ -1,0 +1,22 @@
+<div class="main-view">
+  <div class="list-view">
+    <div class="customer-header flex-row flex-spacebetween">
+      <div>
+        <h1>List of Customers</h1>
+      </div>
+      <div>
+        <button routerLink="{{ 'createcustomer'}}" color="primary" mat-raised-button>Add new customer</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="flex-row" >
+    <div class="customer-list-info">
+      <app-customerlist></app-customerlist>
+    </div>
+    <div class="details-view">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
